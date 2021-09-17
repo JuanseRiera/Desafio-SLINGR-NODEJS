@@ -7,6 +7,7 @@ class Server {
     this.port = process.env.PORT;
     this.path = {
       calculos: "/calculos",
+      informacion: "/informacion",
     };
 
     //Middlewares
@@ -23,6 +24,10 @@ class Server {
 
   routes() {
     this.app.use(this.path.calculos, require("../routes/calculos.routes"));
+    this.app.use(
+      this.path.informacion,
+      require("../routes/informacion.routes")
+    );
   }
 
   listen() {
