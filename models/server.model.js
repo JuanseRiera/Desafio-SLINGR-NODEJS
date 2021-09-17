@@ -6,8 +6,8 @@ class Server {
     this.app = express();
     this.port = process.env.PORT;
     this.path = {
-      calculos: "/calculos",
-      informacion: "/informacion",
+      calculos: "api/calculos",
+      informacion: "api/informacion",
     };
 
     //Middlewares
